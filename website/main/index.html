@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- end google fonts -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>PQC</title>
+</head>
+<body>
+
+  <header class="f-header position-absolute bg-transparent js-f-header" data-theme="dark">
+    <!-- logo -->
+    <div class="f-header__mobile-content container max-width-lg">
+      <a href="index.html" class="f-header__logo">
+        <img src="assets/img/logo.png"/>
+      </a>
+  
+      <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus" aria-label="Toggle menu">
+        <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
+      </button>
+    </div>
+    
+    <!-- navigation -->
+    <div class="f-header__nav" role="navigation">
+      <div class="f-header__nav-grid justify-between@md container max-width-lg">
+        <div class="f-header__nav-logo-wrapper flex-grow flex-basis-0">
+          <a href="index.html" class="f-header__logo">
+            <img src="assets/img/logo.png" style="width: 70px; height: 70px"/>
+          </a>
+          <a href="index.html" class="f-header__logo"><h1>PQCoin</h1></a>
+          <!-- <h1>PQCoin</h1> -->
+        </div>
+        <ul class="f-header__list flex-grow flex-basis-0 justify-center@md">
+          <li class="f-header__item"><a href="#background" class="f-header__link">Background</a></li>
+          <li class="f-header__item"><a href="#Introduction" class="f-header__link">Introduction</a></li>
+          <li class="f-header__item"><a href="#Features" class="f-header__link">Features</a></li>
+          <li class="f-header__item"><a href="#Timeline" class="f-header__link">Timeline</a></li>
+          <li class="f-header__item"><a href="#FAQ" class="f-header__link">FAQ</a></li>
+        </ul>
+    
+        <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
+          <li class="f-header__item">
+            <a href="https://twitter.com/PQ_coin" class="f-header__link f-header__link--icon" aria-label="Follow us on X">
+              <img src="assets/img/x-social-media-white-icon.png" alt="Follow us on X" style="width: 20px; height: 20px;"/>
+              <span class="margin-left-xxs">Follow us on X</span>
+            </a>
+          </li>
+  
+          <li class="f-header__item">
+            <a href="https://discord.gg/gGW2p5BuVJ" class="f-header__link f-header__link--icon" aria-label="Follow us on Discord">
+              <img src="assets/img/discord-white-icon.webp" alt="Follow us on Github" style="width: 25px; height: 25px;"/>
+              <span class="margin-left-xxs">Follow us on Discord</span>
+            </a>
+          </li>
+  
+          <li class="f-header__item">
+            <a href="https://github.com/Pqcoin" class="f-header__link f-header__link--icon" aria-label="Follow us on Github">
+              <img src="assets/img/icons8-github-64.png" alt="Follow us on Github" style="width: 30px; height: 30px;"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- diagonal hero -->
+  <section class="diagonal-section-bottom bg-contrast-lower bg-opacity-50%" style="background-image: url('assets/img/herobackground.webp');" data-theme="dark">
+    <div class="container max-width-adaptive-sm padding-y-xxxl">
+      <div class="text-center">
+        <div class="text-sm opacity-90% margin-bottom-xxs">Welcome</div>
+  
+        <div class="text-component margin-bottom-sm">
+          <h1 class="text-shadow-sm text-xxxl"><em>Post-Quantum</em>&nbsp;&nbsp;Blockchain</h1>
+          <p style="color: #fff;">PQC is a blockchain network that supports resistance against quantum attacks, and utilizes multi-computational power, and is fully decentralized.</p>
+        </div>
+    
+        <div class="flex flex-wrap flex-center gap-sm">
+          <a class="btn btn--primary" onclick="downloadPDF()">Download White Paper</a>
+
+          <a class="link-fx-1 color-contrast-higher" href="https://github.com/maxchan17/pqucauxv2">
+            <span>Learn more</span>
+            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="15.5"/><line x1="10" y1="18" x2="16" y2="12"/><line x1="16" y1="12" x2="22" y2="18" /></g></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function downloadPDF() {
+        // 创建一个隐藏的链接
+        var link = document.createElement('a');
+        link.href = 'assets/pqcoin white paper.pdf'; // 替换为您的PDF文件路径
+        link.download = 'pqcoin white paper.pdf'; // 替换为您想要下载的文件名
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+    </script>
+  <!-- Background-->
+  <section id="background" class="testimonial position-relative z-index-1 padding-y-xxl">
+    <div class="container max-width-adaptive-sm">
+      <h1 class="margin-bottom-lg">Background</h1> 
+  
+      <div class="testimonial__block-wrapper margin-bottom-lg">
+        <blockquote class="text-lg text-left line-height-md ">The EC-DSA signature or its variants like EC-Schnorr will not secure any longer in the post-quantum era.<br/>BTC is approaching its fourth halving of mint. The miners of cryptocurrencies  face significant shrinking of minting.<br/>Few cryptocurrencies, if not at all, are truly decentralized.</blockquote>
+        <svg class="icon icon--xxl color-contrast-higher opacity-10%" aria-hidden="true" viewBox="0 0 64 64"><polygon fill="currentColor" points="2 36 17 2 26 2 15 36 26 36 26 62 2 62 2 36"/><polygon fill="currentColor" points="38 36 53 2 62 2 51 36 62 36 62 62 38 62 38 36"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section id="Introduction" class="position-relative z-index-1 padding-top-xxl" data-theme="secondary">
+      <div class="container max-width-adaptive-lg position-relative z-index-2">
+        <div class="grid gap-md">
+          <div class="col-4@md">
+              <div class="text-sm color-contrast-medium margin-bottom-xxs">PQC</div>
+              <h1>Introduction</h1>
+          </div>
+        
+          <div class="col-8@md">
+            <div class="padding-left-md@md">
+              <div class="text-component">
+                <p>PQC utilizes a multi-parent chain auxiliary proof-of-work (PoW) consensus algorithm. This mechanism supports the computational power of blockchain networks using double-SHA256 (such as BTC and its chidrens like BCH、BSV and XEC) and Scrypt (such as LTC, DOGE). That is, the PQC network does not need to run its own mining pools, instead any miner of BTC/BCH/BSV/XEC or LTC/DOGE can get the rewards of PQC for free!  This is very friendly to most of PoW miners, with the income cutting down by the mint shrinking. By obtaining more computational power, the security of the PQC network will also be greatly enhanced. To address the disparity in computing power, a completely new difficulty adjustment method is employed, which effectively improves the ability to adjust difficulty in the face of significant fluctuations in computing power while also ensuring fair reward distribution.</p>
+      
+                <p>Finally, PQC is fully decentralized. It has no owners, every PQCoin has to be obtained via PoW mining.</p>
+              </div>
+    
+              <div class="flex justify-end margin-top-xxl"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <figure class="bg-decoration z-index-1" aria-hidden="true">
+        <svg class="bg-decoration__svg color-contrast-higher opacity-40%" viewBox="0 0 1920 450" fill="none">
+          <rect opacity="0.5" x="610.131" y="-440" width="128" height="836.003" transform="rotate(46.8712 610.131 -440)"
+            fill="url(#bg-decoration-v1-fx-5-linear-1)" />
+          <rect opacity="0.5" x="1899.13" y="-262" width="128" height="836.003" transform="rotate(46.8712 1899.13 -262)"
+            fill="url(#bg-decoration-v1-fx-5-linear-2)" />
+          <rect opacity="0.5" x="2076.13" y="-321" width="128" height="836.003" transform="rotate(46.8712 2076.13 -321)"
+            fill="url(#bg-decoration-v1-fx-5-linear-3)" />
+          <rect opacity="0.5" x="1294.5" y="40.3308" width="128" height="836.003"
+            transform="rotate(-132.518 1294.5 40.3308)" fill="url(#bg-decoration-v1-fx-5-linear-4)" />
+          <rect opacity="0.5" x="1866.13" y="-453" width="128" height="836.003" transform="rotate(46.8712 1866.13 -453)"
+            fill="url(#bg-decoration-v1-fx-5-linear-5)" />
+          <rect opacity="0.5" x="800.131" y="-418" width="128" height="836.003" transform="rotate(46.8712 800.131 -418)"
+            fill="url(#bg-decoration-v1-fx-5-linear-5)" />
+          <rect opacity="0.5" x="436.448" y="-251" width="76.1734" height="340.424" transform="rotate(46.8712 436.448 -251)"
+            fill="url(#bg-decoration-v1-fx-5-linear-7)" />
+          <defs>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-1" x1="674.131" y1="-440" x2="674.131" y2="396.003"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" />
+              <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-2" x1="1963.13" y1="-262" x2="1963.13" y2="574.003"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" />
+              <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-3" x1="2140.13" y1="-321" x2="2140.13" y2="515.003"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" />
+              <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-4" x1="1358.5" y1="40.3308" x2="1358.5" y2="876.334"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" />
+              <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-5" x1="1930.13" y1="-453" x2="1930.13" y2="383.003"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" />
+              <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-5" x1="864.131" y1="-418" x2="864.131" y2="418.003"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" />
+              <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-7" x1="474.534" y1="-251" x2="474.534" y2="89.4236"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" stop-opacity="0" />
+              <stop offset="1" stop-color="currentColor" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </figure>
+  </section>
+
+  <!-- CTA -->
+  <section id="Features" class="position-relative z-index-1 padding-top-xl">
+      <div class="container max-width-adaptive-lg">
+        <div class="text-xl text-xxl@xs font-bold">
+          <p class="color-contrast-higher font-secondary">Features</p>
+    
+          <a class="td-text-block font-secondary" href="https://github.com/maxchan17/pqucauxv2" aria-label="Join our club">
+            <span class="td-text-block__wrapper">
+              <em class="td-text-block__front-text">Learn more &rarr;</em>
+              <em class="td-text-block__final-text">Learn more &rarr;</em>
+            </span>
+          </a>
+        </div>
+      </div>
+  </section>
+  
+  <!-- list -->
+  <section class="margin-y-xl">
+      <div class="container max-width-sm">
+        <ol class="list-v2 list-v2--ol">
+          <li>
+            <div class="margin-bottom-xs">
+              <h4 class="list-v2__title font-primary">
+                <div class="list-v2__bullet"></div>Post-Quantum Signature Algorithm
+              </h4>
+            </div>
+        
+            <div class="list-v2__content">
+              <div class="text-component">
+                <p class="color-contrast-medium">For quantum computers, Schnorr signatures based on discrete logarithm problems can be easily forged. Continuing to use Schnorr signatures in the post-quantum era is completely insecure for accounts and transactions. Therefore, in response to this situation, the cryptography community has started researching post-quantum cryptography, aiming to construct cryptographic algorithms that can resist quantum attacks.PQC uses the proposed post-quantum digital signature scheme constructed based on prime-order fields and the CRYSTALS-Dilithium digital signature algorithm, referred to as Dilithium-Prime.</p>
+              </div>
+            </div>
+          </li>
+        
+          <li>
+            <div class="margin-bottom-xs">
+              <h4 class="list-v2__title font-primary">
+                <div class="list-v2__bullet"></div>Multi-Parent Chain Auxiliary Proof-of-Work Consensus Algorithm
+              </h4>
+            </div>
+        
+            <div class="list-v2__content">
+              <div class="text-component">
+                <p class="color-contrast-medium">PQC utilizes a multi-parent chain auxiliary proof-of-work (PoW) consensus algorithm that supports the computational power of blockchain networks using double-SHA256 (such as BTC) and Scrypt (such as LTC) PoW hash algorithms.The AuXPoW consensus algorithm significantly enhances the security of blockchains that lack sufficient computational power while increasing the utilization of computational resources and reducing energy consumption and computational costs.</p>
+              </div>
+            </div>
+          </li>
+        
+          <li>
+            <div class="margin-bottom-xs">
+              <h4 class="list-v2__title font-primary">
+                <div class="list-v2__bullet"></div>Difficulty Adjustment Algorithm for Multi-Parent Chains
+              </h4>
+            </div>
+        
+            <div class="list-v2__content">
+              <div class="text-component">
+                <p class="color-contrast-medium">The block production ratio between chains with high computational power and chains with lower computational power is maintained at approximately 10:1. This approach serves to protect low-computational-power parent chains, allowing miners on these chains to maintain a reasonable probability of block production and incentivizing their participation in consensus. Furthermore, it prevents the subchain system from becoming overly reliant on parent chains with high computational power as the sole source of mining power. Each type of parent chain has its own block difficulty.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+  </section>
+    
+  <!-- Timeline -->
+  <div id="Timeline" class="position-relative z-index-1 overflow-hidden padding-y-xl bg-dark">
+      <div class="margin-bottom-lg">
+        <h1 class="text-center">PQC Timeline</h1>
+      </div>
+    
+      <div class="container max-width-adaptive-lg">
+        <div class="v-timeline js-v-timeline" data-animation="on">
+          <section class="v-timeline__section js-v-timeline__section">
+
+            <div class="v-timeline__marker bg-contrast-high border border-3 border-bg-dark" aria-hidden="true"></div>
+            <div class="v-timeline__items-group">
+              <div class="v-timeline__item bg-light padding-md radius-md shadow-xs">
+                <div class="v-timeline__date margin-bottom-sm">
+                  <time class="v-timeline__date-value" datetime="2024-04-20T00:00">April 16 2024</time>
+                </div>
+                <div class="text-component">
+                  <h3>Publish whitepaper and official website</h3>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+          <section class="v-timeline__section js-v-timeline__section">
+            <div class="v-timeline__marker bg-contrast-high border border-3 border-bg-dark" aria-hidden="true"></div>
+      
+            <div class="v-timeline__items-group">
+              <div class="v-timeline__item bg-light padding-md radius-md shadow-xs">
+                <div class="v-timeline__date margin-bottom-sm">
+                  <time class="v-timeline__date-value" datetime="2020-05-01T00:00">April 22 2024</time>
+                </div>
+      
+                <div class="text-component">
+                  <h3>Open the mainnet</h3>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+          <section class="v-timeline__section js-v-timeline__section">
+            <div class="v-timeline__marker bg-contrast-high border border-3 border-bg-dark" aria-hidden="true"></div>
+      
+            <div class="v-timeline__items-group">
+              <div class="v-timeline__item bg-light padding-md radius-md shadow-xs">
+                <div class="v-timeline__date margin-bottom-sm">
+                  <time class="v-timeline__date-value" datetime="2020-04-08T00:00">Sep. 2024</time>
+                </div>
+      
+                <div class="text-component">
+                  <h3>Optimization</h3>
+                  <p>Optimize post-quantum signature efficiency</p>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+          <section class="v-timeline__section js-v-timeline__section">
+            <div class="v-timeline__marker bg-contrast-high border border-3 border-bg-dark" aria-hidden="true"></div>
+      
+            <div class="v-timeline__items-group">
+              <div class="v-timeline__item bg-light padding-md radius-md shadow-xs">
+                <div class="v-timeline__date margin-bottom-sm">
+                  <time class="v-timeline__date-value" datetime="2020-06-01T00:00">2025</time>
+                </div>
+      
+                <div class="text-component">
+                  <h3>Supports the inscription</h3>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="v-timeline__section js-v-timeline__section">
+            <div class="v-timeline__marker bg-contrast-high border border-3 border-bg-dark" aria-hidden="true"></div>
+      
+            <div class="v-timeline__items-group">
+              <div class="v-timeline__item bg-light padding-md radius-md shadow-xs">
+                <div class="v-timeline__date margin-bottom-sm">
+                  <time class="v-timeline__date-value" datetime="2020-05-17T00:00">2026</time>
+                </div>
+      
+                <div class="text-component">
+                  <h3>Layer 2</h3>
+        
+                  <p>Supports layer 2</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+  </div>
+
+  <!-- FAQ -->
+  <section id="FAQ" class="position-relative z-index-1 padding-y-xxl" data-theme="dark">
+    <div class="container max-width-sm position-relative z-index-2">
+      <div class="margin-bottom-lg">
+        <h1 class="text-center">Questions <em class="font-italic">&amp;</em> Answers</h1>
+      </div>
+  
+      <ul class="accordion  js-accordion" data-animation="on" data-multi-items="on">
+        <li class="accordion__item  js-accordion__item">
+          <button class="reset accordion__header padding-y-sm padding-x-md js-tab-focus" type="button">
+            <span class="text-md">How to download and use?</span>
+  
+            <svg class="icon accordion__icon-arrow-v2 no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+              <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10">
+                <path d="M2 2l12 12" />
+                <path d="M14 2L2 14" />
+              </g>
+            </svg>
+          </button>
+  
+          <div class="accordion__panel padding-top-xxs padding-x-md padding-bottom-md js-accordion__panel">
+            <div class="text-component">
+              <p>You can download the source code from github and configure and install it according to the documentation.</p>
+            </div>
+          </div>
+        </li>
+  
+        <li class="accordion__item  js-accordion__item">
+          <button class="reset accordion__header padding-y-sm padding-x-md js-tab-focus" type="button">
+            <span class="text-md">What is “early bird period“ ?</span>
+  
+            <svg class="icon accordion__icon-arrow-v2 no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+              <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10">
+                <path d="M2 2l12 12" />
+                <path d="M14 2L2 14" />
+              </g>
+            </svg>
+          </button>
+  
+          <div class="accordion__panel padding-top-xxs padding-x-md padding-bottom-md js-accordion__panel">
+            <div class="text-component">
+              <p>The early bird period is to encourage users to pay attention and use it in the early stage, and the time is about 3 months.</p>
+            </div>
+          </div>
+        </li>
+  
+        <li class="accordion__item  js-accordion__item">
+          <button class="reset accordion__header padding-y-sm padding-x-md js-tab-focus" type="button">
+            <span class="text-md">What are the development plans?</span>
+  
+            <svg class="icon accordion__icon-arrow-v2 no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+              <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10">
+                <path d="M2 2l12 12" />
+                <path d="M14 2L2 14" />
+              </g>
+            </svg>
+          </button>
+  
+          <div class="accordion__panel padding-top-xxs padding-x-md padding-bottom-md js-accordion__panel">
+            <div class="text-component">
+              <p>We will optimize the efficiency of algorithms, improve usage efficiency, and provide other applications.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <figure class="bg-decoration z-index-1" aria-hidden="true">
+      <svg class="bg-decoration__svg color-contrast-low" viewBox="0 0 1920 450" fill="none">
+        <rect opacity="0.5" x="1410.61" y="42.6123" width="246.643" height="304.604"
+          transform="rotate(-45 1410.61 42.6123)" fill="url(#bg-decoration-v1-fx-1-linear-1)" />
+        <rect opacity="0.5" x="1176" y="-20.5969" width="246.643" height="304.604" transform="rotate(-45 1176 -20.5969)"
+          fill="url(#bg-decoration-v1-fx-1-linear-2)" />
+        <circle opacity="0.5" cx="1572" cy="205" r="46" fill="url(#bg-decoration-v1-fx-1-radial-1)" />
+        <g opacity="0.5" filter="url(#bg-decoration-v1-fx-1-blur-1)">
+          <circle cx="1680" cy="324" r="26" fill="var(--color-primary)" />
+        </g>
+        <defs>
+          <filter id="bg-decoration-v1-fx-1-blur-1" x="1644" y="288" width="72" height="72" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur" />
+          </filter>
+          <linearGradient id="bg-decoration-v1-fx-1-linear-1" x1="1533.93" y1="42.6123" x2="1533.93" y2="347.217"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="currentColor" />
+            <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient id="bg-decoration-v1-fx-1-linear-2" x1="1299.32" y1="-20.5969" x2="1299.32" y2="284.007"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="currentColor" />
+            <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          </linearGradient>
+          <radialGradient id="bg-decoration-v1-fx-1-radial-1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(1572 205) rotate(90) scale(46)">
+            <stop stop-color="var(--color-primary)" stop-opacity="0" />
+            <stop offset="1" stop-color="var(--color-primary)" />
+          </radialGradient>
+        </defs>
+      </svg>
+    </figure>
+  </section>
+
+  <!--Contact-->
+  <section class="contact position-relative z-index-1 padding-y-xl">
+    <div class="container max-width-lg">
+      <div class="margin-bottom-lg">
+        <h1 class="text-center">Contact Us</h1>
+        <dt class="font-bold margin-top-lg  margin-bottom-xxs text-center">Email</dt>
+        <dd class="line-height-md text-center@md">
+        <a href="mailto:Postquantumcoin@outlook.com">Postquantumcoin@outlook.com</a>
+        <p class="color-contrast-medium">Mon - Fri, 9AM - 5PM</p>
+        </dd>
+      </div>
+    </div>
+  </section>
+
+  <!--footer-->
+  <footer class="main-footer position-relative z-index-1 padding-top-xxs">
+      <div class="flex flex-column border-top padding-y-xs margin-top-lg flex-row@md justify-between@md items-center@md">
+        <div class="margin-bottom-sm margin-bottom-0@md">
+          <div class="text-sm text-xs@md color-contrast-medium flex flex-wrap gap-xs">
+            <span>&copy; PQCoin website</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
